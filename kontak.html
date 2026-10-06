@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak & Formulir Pemesanan – Siger & Co.</title>
+  <meta name="description" content="Formulir reservasi dan kontak konsultasi Siger & Co. untuk layanan pernikahan di Lampung dan Palembang.">
+  <link rel="stylesheet" href="style.css">
+  <script src="audio.js" defer></script>
+</head>
+<body>
+  <audio id="background-audio" autoplay loop hidden>
+    <source src="gambar/Bruno Mars - Marry You (Official Lyric Video).mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ==================== 1. HEADER & NAVIGASI ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Logo Brand -->
+        <a href="index.html" class="brand-logo">
+          <span class="brand-name">Siger & Co.</span>
+          <span class="brand-sub">Organizer · Digital</span>
+        </a>
+
+        <!-- Menu Navigasi -->
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Beranda</a>
+          <a href="katalog.html" class="nav-link">Katalog & Paket</a>
+          <a href="katalog.html#portofolio" class="nav-link">Portofolio</a>
+          <a href="katalog.html#digital" class="nav-link">Digital Experience</a>
+          <a href="katalog.html#blog" class="nav-link">Blog & Tips</a>
+          <a href="kontak.html" class="nav-link active">Kontak & Reservasi</a>
+        </nav>
+
+        <!-- Tombol Navigasi -->
+        <div class="header-action">
+          <a href="#reservasi" class="btn btn-primary">Konsultasi Acara</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== 2. BANNER HALAMAN ==================== -->
+  <section style="background-color: #292524; color: #ffffff; padding: 60px 0; text-align: center;">
+    <div class="container">
+      <span class="section-tag" style="color: #d4af37;">Reservasi & Konsultasi</span>
+      <h1 class="section-title" style="color: #ffffff; margin-bottom: 10px;">Formulir Pemesanan Acara</h1>
+      <p style="color: #d6d3d1; max-width: 650px; margin: 0 auto; font-size: 1rem;">
+        Isi formulir responsif di bawah ini untuk mengunci tanggal pernikahan Anda atau menjadwalkan sesi konsultasi gratis bersama wedding planner kami.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== 3. FORMULIR PEMESANAN & INFORMASI KONTAK ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="align-items: flex-start; gap: 40px;">
+        
+        <!-- KOLOM KIRI: FORMULIR PEMESANAN RESPONSIF -->
+        <div class="form-card" id="reservasi">
+          <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 8px;">Formulir Reservasi Tanggal</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 25px;">
+            Silakan lengkapi data rencana pernikahan Anda. Tim kami akan menghubungi Anda via WhatsApp dalam 1x24 jam untuk mengirimkan proposal resmi.
+          </p>
+
+          <form action="#" method="POST">
+            
+            <!-- Baris 1: Nama Pengantin -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nama_pria" class="form-label">Nama Pengantin Pria *</label>
+                <input type="text" id="nama_pria" name="nama_pria" class="form-control" placeholder="Contoh: Dimas Dananjaya" required>
+              </div>
+              <div class="form-group">
+                <label for="nama_wanita" class="form-label">Nama Pengantin Wanita *</label>
+                <input type="text" id="nama_wanita" name="nama_wanita" class="form-control" placeholder="Contoh: Sarah Clarissa" required>
+              </div>
+            </div>
+
+            <!-- Baris 2: Kontak -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="whatsapp" class="form-label">Nomor WhatsApp Aktif *</label>
+                <input type="tel" id="whatsapp" name="whatsapp" class="form-control" placeholder="0812-xxxx-xxxx" required>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Alamat Email *</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="email@domain.com" required>
+              </div>
+            </div>
+
+            <!-- Baris 3: Tanggal & Fleksibilitas -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="tanggal_acara" class="form-label">Rencana Tanggal Pernikahan *</label>
+                <input type="date" id="tanggal_acara" name="tanggal_acara" class="form-control" required>
+                <label class="checkbox-item" style="margin-top: 8px;">
+                  <input type="checkbox" name="tanggal_fleksibel" value="ya">
+                  <span>Tanggal ini masih fleksibel / tentatif</span>
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="wilayah" class="form-label">Kota / Wilayah Acara *</label>
+                <select id="wilayah" name="wilayah" class="form-control" required>
+                  <option value="Bandar Lampung" selected>Bandar Lampung</option>
+                  <option value="Metro">Kota Metro</option>
+                  <option value="Lampung">Kabupaten/Kota lain di Lampung</option>
+                  <option value="Palembang">Palembang</option>
+                  <option value="Luar-Kota">Luar wilayah / Destination</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Baris 4: Venue & Estimasi Tamu -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="venue" class="form-label">Nama Gedung / Venue (Jika sudah ada)</label>
+                <input type="text" id="venue" name="venue" class="form-control" placeholder="Contoh: The Tribrata / Belum Menentukan">
+              </div>
+              <div class="form-group">
+                <label for="jumlah_tamu" class="form-label">Estimasi Jumlah Undangan *</label>
+                <select id="jumlah_tamu" name="jumlah_tamu" class="form-control" required>
+                  <option value="< 200 Tamu">Kurang dari 200 Tamu (Intimate)</option>
+                  <option value="300 - 500 Tamu" selected>300 - 500 Tamu (Menengah)</option>
+                  <option value="500 - 800 Tamu">500 - 800 Tamu (Besar)</option>
+                  <option value="800 - 1.200+ Tamu">800 - 1.200+ Tamu (Grand Ballroom)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Baris 5: Paket Layanan & Konsep -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="paket" class="form-label">Pilihan Paket Layanan *</label>
+                <select id="paket" name="paket" class="form-control" required>
+                  <option value="Signature Day-Of">Signature Day-Of Organizing (Rp 28jt)</option>
+                  <option value="Intimate Ceremony">Intimate Ceremony (Rp 18.5jt)</option>
+                  <option value="Full Planning">Full Planning & Concierge (Rp 45jt)</option>
+                  <option value="Royal All-In">Royal All-In Suite (Rp 98jt+)</option>
+                  <option value="Undangan Digital Saja">Undangan Digital Saja</option>
+                  <option value="Konsultasi Awal">Konsultasi Awal Dahulu</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="konsep" class="form-label">Konsep Acara Impian</label>
+                <select id="konsep" name="konsep" class="form-control">
+                  <option value="Lampung Pepadun">Adat Lampung Pepadun</option>
+                  <option value="Lampung Saibatin">Adat Lampung Saibatin</option>
+                  <option value="Adat Jawa">Adat Jawa (Solo / Jogja)</option>
+                  <option value="Adat Sunda">Adat Sunda</option>
+                  <option value="Adat Minang">Adat Minang</option>
+                  <option value="Modern International">Modern International Minimalist</option>
+                  <option value="Outdoor Glasshouse">Outdoor / Botanical Glasshouse</option>
+                  <option value="Belum Tahu">Belum Menentukan Konsep</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Baris 6: Kebutuhan Tambahan -->
+            <div class="form-group">
+              <label class="form-label">Fitur Tambahan Digital Experience:</label>
+              <div class="checkbox-group">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="fitur_undangan" value="ya" checked>
+                  <span>Undangan Web & RSVP Digital</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="fitur_qr" value="ya" checked>
+                  <span>QR Code Check-in Resepsionis</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="fitur_drone" value="ya">
+                  <span>Dokumentasi Drone 4K</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="fitur_streaming" value="ya">
+                  <span>Live Streaming Akad</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Baris 7: Catatan Khusus -->
+            <div class="form-group">
+              <label for="catatan" class="form-label">Catatan Khusus / Pertanyaan Awal</label>
+              <textarea id="catatan" name="catatan" class="form-control" placeholder="Tuliskan jika ada preferensi vendor dekorasi, estimasi budget keseluruhan, atau permintaan waktu konsultasi khusus..."></textarea>
+            </div>
+
+            <!-- Tombol Kirim -->
+            <div style="margin-top: 30px;">
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">Kirim Formulir Pemesanan</button>
+              <p style="font-size: 0.75rem; color: #78716c; text-align: center; margin-top: 10px;">
+                *Data Anda aman dan hanya digunakan untuk keperluan konsultasi Siger &amp; Co.
+              </p>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- KOLOM KANAN: INFORMASI KONTAK & FAST RESPONSE -->
+        <div>
+          <div class="contact-info-box">
+            <div>
+              <h3>Kantor & Layanan Siger & Co.</h3>
+              <p style="color: #d6d3d1; font-size: 0.9rem; margin-bottom: 25px;">
+                Kami mengundang Anda dan pasangan untuk berdiskusi santai di kantor kami atau melalui sesi online Zoom.
+              </p>
+
+              <div class="contact-list">
+                <div class="contact-item">
+                  <h4>Kantor Pusat & Galeri:</h4>
+                  <p>
+                    Jl. Kedaton, Bandar Lampung
+                  </p>
+                </div>
+
+                <div class="contact-item">
+                  <h4>Konsultasi Online:</h4>
+                  <p>
+                    Konsultasi dapat dijadwalkan secara daring melalui WhatsApp.
+                  </p>
+                </div>
+
+                <div class="contact-item">
+                  <h4>Jam Konsultasi:</h4>
+                  <p>
+                    Senin - Minggu: 09.00 - 20.00 WIB<br>
+                    (Di luar jam operasional, pesan tetap dapat ditinggalkan via WhatsApp)
+                  </p>
+                </div>
+
+                <div class="contact-item">
+                  <h4>Email Resmi:</h4>
+                  <p>
+                    halo@sigerweddings.com
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- WhatsApp Fast Response Box -->
+            <div class="whatsapp-card">
+              <p>Butuh jawaban cepat atau ingin cek ketersediaan tanggal hari ini?</p>
+              <a href="https://wa.me/628982677818?text=Halo%20Siger%20%26%20Co.,%20saya%20ingin%20cek%20ketersediaan%20jadwal%20dan%20konsultasi%20wedding%20organizer." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
+                Chat WhatsApp: 0898-2677-818
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. FAQ SINGKAT PEMESANAN ==================== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Tanya Jawab</span>
+        <h2 class="section-title">Pertanyaan Umum Pemesanan</h2>
+        <p class="section-desc">Hal-hal yang sering ditanyakan calon pengantin sebelum mengunci tanggal.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card" style="padding: 25px;">
+          <h4 style="font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 8px;">Bagaimana skema pembayaran di Siger &amp; Co.?</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+            Pembayaran dibagi menjadi 3 termin yang transparan: DP 30% untuk mengunci tanggal acara, termin kedua 40% setelah Technical Meeting H-30, dan pelunasan 30% pada H-7 sebelum hari pelaksanaan.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 25px;">
+          <h4 style="font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 8px;">Apakah bisa membawa vendor dari luar rekanan Siger &amp; Co.?</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+            Sangat bisa! Meskipun kami memiliki jaringan 500+ vendor rekanan, tim Wedding Organizer kami dengan senang hati mengoordinasikan vendor pilihan pribadi Anda agar selaras dengan master rundown.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <span class="brand-name" style="color: #ffffff; display: block; margin-bottom: 10px;">Siger & Co.</span>
+          <p>
+            Penyedia jasa Wedding Organizer, Wedding Planner, dan Undangan Digital untuk Lampung dan Palembang.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Menu Cepat</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="katalog.html">Paket Pernikahan</a></li>
+            <li><a href="katalog.html#portofolio">Galeri Portofolio</a></li>
+            <li><a href="katalog.html#blog">Blog Pernikahan</a></li>
+            <li><a href="kontak.html">Kontak & Pemesanan</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Layanan Kami</h4>
+          <ul class="footer-links">
+            <li><a href="katalog.html#paket">Day-of Coordination</a></li>
+            <li><a href="katalog.html#paket">Full Wedding Planning</a></li>
+            <li><a href="katalog.html#digital">Undangan Digital Web</a></li>
+            <li><a href="katalog.html#paket">Paket All-In Luxury</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kantor & Kontak</h4>
+          <p>
+            <strong>Kantor Siger & Co.:</strong><br>
+            Jl. Kedaton, Bandar Lampung<br><br>
+            <strong>WhatsApp:</strong> 0898-2677-818<br>
+            <strong>Email:</strong> halo@sigerweddings.com
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Siger & Co. Hak Cipta Dilindungi.</div>
+        <div>
+          <a href="kontak.html" style="color: #a8a29e; margin-right: 15px;">Kebijakan Privasi</a>
+          <a href="kontak.html" style="color: #a8a29e;">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

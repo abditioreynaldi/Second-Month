@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Paket & Portofolio – Siger & Co.</title>
+  <meta name="description" content="Katalog paket, dokumentasi pernikahan adat Lampung, dan layanan undangan digital Siger & Co.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="background-audio" loop preload="auto" hidden>
+    <source src="gambar/Bruno Mars - Marry You (Official Lyric Video).mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="cover-overlay" role="dialog" aria-modal="true" aria-labelledby="cover-names">
+    <p class="cover-title">THE WEDDING ORGANIZER</p>
+    <h1 class="cover-names" id="cover-names">Siger &amp; Co.</h1>
+    <p class="cover-recipient">Rayakan Pernikahanmu Bersama Kami</p>
+    <button class="btn-open" onclick="klikdisini()">
+      Klik Untuk Melihat Paket
+    </button>
+    <p class="cover-status" id="audio-status" role="status" aria-live="polite"></p>
+  </div>
+
+  <!-- ==================== 1. HEADER & NAVIGASI ==================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Logo Brand -->
+        <a href="index.html" class="brand-logo">
+          <span class="brand-name">Siger & Co.</span>
+          <span class="brand-sub">Organizer · Digital</span>
+        </a>
+
+        <!-- Menu Navigasi -->
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Beranda</a>
+          <a href="katalog.html" class="nav-link active">Katalog & Paket</a>
+          <a href="#portofolio" class="nav-link">Portofolio</a>
+          <a href="#digital" class="nav-link">Digital Experience</a>
+          <a href="#blog" class="nav-link">Blog & Tips</a>
+          <a href="kontak.html" class="nav-link">Kontak & Reservasi</a>
+        </nav>
+
+        <!-- Tombol CTA Navigasi -->
+        <div class="header-action">
+          <a href="kontak.html#reservasi" class="btn btn-primary">Konsultasi Acara</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== 2. BANNER HALAMAN ==================== -->
+  <section style="background-color: #292524; color: #ffffff; padding: 60px 0; text-align: center;">
+    <div class="container">
+      <span class="section-tag" style="color: #d4af37;">Katalog Lengkap</span>
+      <h1 class="section-title" style="color: #ffffff; margin-bottom: 10px;">Pilihan Paket & Dokumentasi Karya</h1>
+      <p style="color: #d6d3d1; max-width: 650px; margin: 0 auto; font-size: 1rem;">
+        Temukan paket wedding organizer dan inspirasi pernikahan dari portofolio Siger &amp; Co.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== 3. DAFTAR PAKET WEDDING ORGANIZER ==================== -->
+  <section class="section" id="paket">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Paket & Investasi</span>
+        <h2 class="section-title">Paket Layanan Wedding Organizer</h2>
+        <p class="section-desc">Transparansi harga tanpa biaya tersembunyi. Disesuaikan dengan skala jumlah tamu dan kebutuhan pendampingan Anda.</p>
+      </div>
+
+      <div class="grid-4">
+        <!-- Paket 1 -->
+        <div class="package-card">
+          <div>
+            <h3 class="package-name">Intimate Ceremony</h3>
+            <p class="package-subtitle">Akad Nikah / Pemberkatan & Intimate Reception s/d 200 Tamu</p>
+            <div class="package-price">Rp 18.500.000</div>
+            
+            <ul class="package-features">
+              <li>Pendampingan intensif mulai H-30</li>
+              <li>Tim 6 kru berseragam jas resmi</li>
+              <li>1x Technical Meeting di gedung</li>
+              <li>Penyusunan Master Rundown acara</li>
+              <li>1 LO khusus Pengantin & Orang Tua</li>
+              <li>Bonus Undangan Digital Web Basic</li>
+            </ul>
+          </div>
+
+          <div style="margin-top: 20px;">
+            <a href="kontak.html" class="btn btn-outline" style="width: 100%;">Pilih Paket Ini</a>
+          </div>
+        </div>
+
+        <!-- Paket 2 (Popular) -->
+        <div class="package-card popular">
+          <span class="popular-badge">Paling Populer</span>
+          <div>
+            <h3 class="package-name">Signature Day-Of</h3>
+            <p class="package-subtitle">Manajemen Hari H Resepsi Menengah (300 - 600 Tamu)</p>
+            <div class="package-price">Rp 28.000.000</div>
+            
+            <ul class="package-features">
+              <li>Koordinasi vendor intensif mulai H-60</li>
+              <li>Tim 10 kru profesional bersertifikat</li>
+              <li>2x Pertemuan keluarga & 1x TM Venue</li>
+              <li>Simulasi gladi resik hari H</li>
+              <li>Monitoring katering & checklist logistik</li>
+              <li>Bonus Undangan Web Premium + QR Check-in</li>
+              <li>Grup WhatsApp pendampingan 24/7</li>
+            </ul>
+          </div>
+
+          <div style="margin-top: 20px;">
+            <a href="kontak.html" class="btn btn-gold" style="width: 100%;">Pilih Paket Ini</a>
+          </div>
+        </div>
+
+        <!-- Paket 3 -->
+        <div class="package-card">
+          <div>
+            <h3 class="package-name">Full Planning</h3>
+            <p class="package-subtitle">Perencanaan Penuh dari Nol (H-180 / 6 Bulan Sebelum Acara)</p>
+            <div class="package-price">Rp 45.000.000</div>
+            
+            <ul class="package-features">
+              <li>Pendampingan penuh mulai H-180</li>
+              <li>Akses ke 500+ vendor harga mitra</li>
+              <li>Pembuatan Konsep, Moodboard & Skema Biaya</li>
+              <li>Pendampingan Food Tasting & Fitting</li>
+              <li>Tim 14 kru + Wedding Director Senior</li>
+              <li>Akses dashboard persiapan acara Siger &amp; Co.</li>
+              <li>Emergency Bridal Kit & Butler Keluarga</li>
+            </ul>
+          </div>
+
+          <div style="margin-top: 20px;">
+            <a href="kontak.html" class="btn btn-outline" style="width: 100%;">Pilih Paket Ini</a>
+          </div>
+        </div>
+
+        <!-- Paket 4 -->
+        <div class="package-card">
+          <div>
+            <h3 class="package-name">Royal All-In Suite</h3>
+            <p class="package-subtitle">WO + Dekorasi Eksklusif + Dokumentasi Foto & Video Sinematik</p>
+            <div class="package-price">Rp 98.000.000+</div>
+            
+            <ul class="package-features">
+              <li>Semua fasilitas Full Planning Suite</li>
+              <li>Tim WO 16 kru + 2 Field Directors</li>
+              <li>Paket Dekorasi Pelaminan 14-16m Mewah</li>
+              <li>Dokumentasi Sinematik Lengkap + Drone 4K</li>
+              <li>Undangan Digital VIP Custom Animasi</li>
+              <li>Sistem Resepsionis Kiosk Layar Sentuh</li>
+              <li>Konsultasi Adat Pakem bersama Sesepuh</li>
+            </ul>
+          </div>
+
+          <div style="margin-top: 20px;">
+            <a href="kontak.html" class="btn btn-primary" style="width: 100%;">Pilih Paket Ini</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. PORTOFOLIO LENGKAP ==================== -->
+  <section class="section section-alt" id="portofolio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Galeri Karya</span>
+        <h2 class="section-title">Dokumentasi Pernikahan Nyata</h2>
+        <p class="section-desc">Setiap pasangan memiliki cerita unik. Berikut adalah beberapa pesta pernikahan yang kami organisir dengan sepenuh hati.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Portofolio 1: Jawa -->
+        <article class="card">
+          <div class="portfolio-img-wrap">
+            <img src="gambar/foto5.jpeg" alt="Rizky dan Amanda">
+            <span class="portfolio-theme-badge">Lampung Pepadun Intimate</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">Tradisional & Indoor <span>·</span> 650 Undangan</div>
+            <h3 class="card-title">Rizky & Amanda</h3>
+            <p class="card-text">
+              Pernikahan Rizky &amp; Amanda memadukan adat Lampung Pepadun, Siger 7 lekuk, kopiah emas, dan kain tapis Jung Sarat dalam suasana intim yang anggun.
+            </p>
+            <div class="vendor-list">
+              <strong>Venue:</strong> The Manor Andara<br>
+              <strong>Dekorasi:</strong> Erza Art Decor x Siger & Co.<br>
+              <strong>Catering:</strong> Wafda Royal Banquet Catering<br>
+            </div>
+            <p style="font-style: italic; font-size: 0.8rem; color: #57534e; margin-top: 15px; border-left: 2px solid #b48c48; padding-left: 10px;">
+              "Keluarga besar dari Lampung Selatan sangat terkesan dengan tata cara adat yang tetap pakem namun dikemas sangat tepat waktu." — Amanda
+            </p>
+          </div>
+        </article>
+
+        <!-- Portofolio 2: Modern Glasshouse -->
+        <article class="card">
+          <div class="portfolio-img-wrap">
+            <img src="gambar/foto6.jpeg" alt="Dimas dan Sarah">
+            <span class="portfolio-theme-badge"> Siger Lampung Pepadun Grandeur</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">Modern International <span>·</span> 450 Undangan</div>
+            <h3 class="card-title">Dimas & Sarah</h3>
+            <p class="card-text">
+              Pernikahan Dimas &amp; Sarah menghadirkan Siger Pepadun 7 lekuk, kopiah keagungan, serta prosesi Nyabok, Cakak Pepadun, dan Tari Bedana.
+            </p>
+            <div class="vendor-list">
+              <strong>Venue:</strong> Grand Ballroom Hotel Mulia Senayan<br>
+              <strong>Dekorasi:</strong> Siger Pepadun Luxury by Siger & Co.<br>
+              <strong>Catering:</strong> Plataran Culinary Heritage<br>
+              <strong>Fotografi:</strong> Visual Poetry Wedding
+            </div>
+            <p style="font-style: italic; font-size: 0.8rem; color: #57534e; margin-top: 15px; border-left: 2px solid #b48c48; padding-left: 10px;">
+              "Kami tidak pusing memikirkan teknis sama sekali di hari H. Semuanya terkoordinasi rapi lewat tim Siger & Co." — Dimas & Sarah
+            </p>
+          </div>
+        </article>
+
+        <!-- Portofolio 3: Minang -->
+        <article class="card">
+          <div class="portfolio-img-wrap">
+            <img src="gambar/foto7.jpeg" alt="Farhan dan Nadia">
+            <span class="portfolio-theme-badge">Lampung Saibatin Royal</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">Tradisional & Adat <span>·</span> 850 Undangan</div>
+            <h3 class="card-title">Farhan & Nadia</h3>
+            <p class="card-text">
+              Farhan &amp; Nadia merayakan pernikahan adat Saibatin dengan singgasana marun dan emas, siger bertingkat, serta aksesori kalung buah jukum yang melambangkan kemakmuran dan kehormatan keluarga.
+            </p>
+            <div class="vendor-list">
+              <strong>Venue:</strong> Balai Samudera, Kelapa Gading<br>
+              <strong>Dekorasi:</strong> Gadang Art & Design<br>
+              <strong>Catering:</strong> Chikal Primarasa & Minang Buffet<br>
+              <strong>Attire & MUA:</strong> Des Iskandar & Bennu Sorumba
+            </div>
+            <p style="font-style: italic; font-size: 0.8rem; color: #57534e; margin-top: 15px; border-left: 2px solid #b48c48; padding-left: 10px;">
+              "Flow salaman dan katering tertata tertib tanpa antrean panjang. Sangat profesional!" — Bpk. H. Syarifuddin
+            </p>
+          </div>
+        </article>
+
+        <!-- Portofolio 4: Intimate Pine Forest -->
+        <article class="card">
+          <div class="portfolio-img-wrap">
+            <img src="gambar/foto8.jpeg" alt="Kevin dan Michelle">
+            <span class="portfolio-theme-badge">Adat Lampung Pepadun</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">Intimate & Outdoor <span>·</span> 180 Undangan</div>
+            <h3 class="card-title">Kevin & Michelle</h3>
+            <p class="card-text">
+              Pesona sakral adat Lampung Pepadun yang menyatukan keagungan Siger 7 lekuk dan Kopiah emas. Dari prosesi adat Nyabok, Cakak Pepadun, hingga arak-arakan pengantin diiringi Talo Balak yang khidmat dan megah.
+            </p>
+            <div class="vendor-list">
+              <strong>Venue:</strong> Marriot Lampung<br>
+              <strong>Dekorasi:</strong> Wildflower & Pine Atelier<br>
+              <strong>Dokumentasi:</strong> Nordic Light Studio
+            </div>
+          </div>
+        </article>
+
+        <!-- Portofolio 5 -->
+        <article class="card">
+          <div class="portfolio-img-wrap">
+            <img src="gambar/foto9.jpeg" alt="Andika dan Putri">
+            <span class="portfolio-theme-badge">Siger Lampung Pepadun Luxury</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">Ballroom & Luxury <span>·</span> 750 Undangan</div>
+            <h3 class="card-title">Andika & Putri</h3>
+            <p class="card-text">
+              Nuansa royal Lampung Pepadun mengiringi pernikahan Andika &amp; Putri. Siger 7 lekuk, kalung papan jajar, dan selempang tapis Jung Sarat dikemas modern tanpa menghilangkan marwah adat.
+            </p>
+            <div class="vendor-list">
+              <strong>Venue:</strong> Grand Ballroom Hotel Mulia Senayan<br>
+              <strong>Dekorasi:</strong> Stupa Caspea Floral & Decor<br>
+              <strong>Busana:</strong> Didiet Maulana Svarna by IKAT
+            </div>
+          </div>
+        </article>
+
+        <!-- Portofolio 6 -->
+        <article class="card">
+          <div class="portfolio-img-wrap">
+            <img src="gambar/foto10.jpeg" alt="Arya dan Clarissa">
+            <span class="portfolio-theme-badge"> Lampung Saibatin Grandeur</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">Ballroom & Luxury <span>·</span> 900 Undangan</div>
+            <h3 class="card-title">Arya & Clarissa</h3>
+            <p class="card-text">
+              Arya &amp; Clarissa merayakan adat Lampung Saibatin dengan pelaminan marun dan emas, siger bertingkat, dekorasi bunga merah, serta Tari Sigeh Penguten.
+            <div class="vendor-list">
+              <strong>Venue:</strong> InterContinental Jakarta Pondok Indah<br>
+              <strong>Dekorasi:</strong> Nefi Decor Luxury Floral<br>
+              <strong>Gaun:</strong> Hian Tjen Haute Couture
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. Undangan Digital ==================== -->
+  <section class="section" id="digital">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Teknologi Pernikahan</span>
+        <h2 class="section-title">Layanan Digital Siger & Co.</h2>
+        <p class="section-desc">Kemudahan era digital untuk melengkapi kesempurnaan perayaan pernikahan Anda.</p>
+      </div>
+
+      <div class="digital-feature-box">
+        <div class="grid-2" style="align-items: center;">
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 15px;">Undangan Web Interaktif & QR Resepsionis</h3>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">
+              Tinggalkan undangan cetak yang memakan biaya besar dan sulit dikonfirmasi. Dengan platform digital kami, Anda mendapatkan kemudahan menyeluruh:
+            </p>
+            <ul class="feature-check-list">
+              <li><strong>Custom Nama Tamu:</strong> Setiap link undangan dapat memuat nama tamu yang dituju secara otomatis (Personalized Link).</li>
+              <li><strong>Google Maps & Navigasi:</strong> Tamu tidak akan tersesat karena tombol navigasi langsung membuka aplikasi peta di ponsel.</li>
+              <li><strong>Audio Latar Musik Sakral:</strong> Memberikan suasana emosional yang indah saat tamu membuka undangan Anda.</li>
+              <li><strong>Dashboard Real-Time RSVP:</strong> Anda dapat memantau jumlah tamu yang pasti hadir untuk pengaturan porsi katering yang tepat.</li>
+              <li><strong>Scan QR Code Check-in:</strong> Waktu registrasi meja tamu hanya butuh 2-3 detik per orang, bebas antrean panjang.</li>
+            </ul>
+            <div style="margin-top: 25px;">
+              <a href="kontak.html" class="btn btn-gold">Pesan Paket Undangan Digital</a>
+            </div>
+          </div>
+
+          <div>
+            <img src="gambar/Undangan.webp" alt="Fitur Digital Wedding" class="digital-preview-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. BLOG & JOURNAL PERNIKAHAN LENGKAP ==================== -->
+  <section class="section section-alt" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">The Wedding Journal</span>
+        <h2 class="section-title">Inspirasi & Panduan Calon Pengantin</h2>
+        <p class="section-desc">Edukasi komprehensif agar persiapan pernikahan Anda berjalan tertib dan menyenangkan.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Blog 1 -->
+        <article class="card blog-card">
+          <div class="card-body">
+            <div>
+              <span class="blog-tag">Panduan Teknis</span>
+              <h3 class="card-title">Panduan Lengkap Rundown Hari H: Dari Subuh Hingga Resepsi</h3>
+              <p class="card-text">
+                Menyusun alur waktu hari H adalah kunci ketenangan calon pengantin. Simak panduan akad dan resepsi dari tim Siger &amp; Co.
+              </p>
+              <ul style="font-size: 0.8rem; color: #57534e; margin-top: 10px; padding-left: 15px; list-style: disc;">
+                <li>Buffer time 30 menit antara makeup dan sesi foto gaun</li>
+                <li>Liaison Officer khusus penghulu KUA H-3</li>
+                <li>Private room break 15 menit sebelum kirab malam</li>
+              </ul>
+            </div>
+            <div class="blog-author">
+              <span>Oleh: <strong>Ratih Pratiwi (Head of Planning)</strong> · 6 Menit Baca</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog 2 -->
+        <article class="card blog-card">
+          <div class="card-body">
+            <div>
+              <span class="blog-tag">Budgeting</span>
+              <h3 class="card-title">7 Strategi Mengelola Anggaran Pernikahan Tanpa Korban Kualitas</h3>
+              <p class="card-text">
+                Formula alokasi anggaran pernikahan berdasarkan skala prioritas: alokasikan 40-45% untuk katering & venue, dan hemat biaya cetak hingga 70% dengan undangan web.
+              </p>
+              <ul style="font-size: 0.8rem; color: #57534e; margin-top: 10px; padding-left: 15px; list-style: disc;">
+                <li>Katering lezat adalah standar kehormatan tamu</li>
+                <li>Teknik warm lighting 2x melipatgandakan efek mewah dekorasi</li>
+                <li>Alokasi dana darurat 5-8% untuk biaya tak terduga</li>
+              </ul>
+            </div>
+            <div class="blog-author">
+              <span>Oleh: <strong>Baskoro Aditya (Budget Consultant)</strong> · 5 Menit Baca</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog 3 -->
+        <article class="card blog-card">
+          <div class="card-body">
+            <div>
+              <span class="blog-tag">Tradisi & Adat</span>
+              <h3 class="card-title">Pesona Pernikahan Adat Modern: Tradisi Berpadu Estetika Masa Kini</h3>
+              <p class="card-text">
+                Pelajari bagaimana mengombinasikan kain songket Palembang atau batik tulis Sidomukti dengan aksen kristal modern, serta aransemen musik kirab yang megah.
+              </p>
+              <ul style="font-size: 0.8rem; color: #57534e; margin-top: 10px; padding-left: 15px; list-style: disc;">
+                <li>Pakem akad nikah dan sungkeman tetap dijaga</li>
+                <li>Palet warna velvet midnight & champagne gold</li>
+                <li>Kolaborasi gamelan tradisi dengan string quartet</li>
+              </ul>
+            </div>
+            <div class="blog-author">
+              <span>Oleh: <strong>Nindya Kusuma (Wedding Stylist)</strong> · 7 Menit Baca</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog 4 -->
+        <article class="card blog-card">
+          <div class="card-body">
+            <div>
+              <span class="blog-tag">Checklist</span>
+              <h3 class="card-title">Checklist Pernikahan 6-12 Bulan: Panduan Langkah Bebas Stres</h3>
+              <p class="card-text">
+                Daftar lengkap tahapan persiapan yang wajib diselesaikan setiap bulannya: dari kunci tanggal gedung, booking vendor inti, hingga jadwal technical meeting gabungan.
+              </p>
+              <ul style="font-size: 0.8rem; color: #57534e; margin-top: 10px; padding-left: 15px; list-style: disc;">
+                <li>H-12: Kunci venue dan tema utama</li>
+                <li>H-6: Kunci WO, katering, dan fotografer</li>
+                <li>H-1: Technical meeting dan gladi resik venue</li>
+              </ul>
+            </div>
+            <div class="blog-author">
+              <span>Oleh: <strong>Ratih Pratiwi (Head of Planning)</strong> · 8 Menit Baca</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog 5 -->
+        <article class="card blog-card">
+          <div class="card-body">
+            <div>
+              <span class="blog-tag">Tren Dekorasi</span>
+              <h3 class="card-title">Tren Dekorasi 2026: Kehangatan Earthy Tones & Ambient Lighting</h3>
+              <p class="card-text">
+                Peralihan dari dekorasi plastik kaku menuju keindahan material organik, kombinasi bunga potong lokal dengan dedaunan alami, dan pencahayaan lilin temaram.
+              </p>
+              <ul style="font-size: 0.8rem; color: #57534e; margin-top: 10px; padding-left: 15px; list-style: disc;">
+                <li>Warna linen krem, terracotta lembut, dan sage green</li>
+                <li>Pencahayaan lilin ambient di meja perjamuan VIP</li>
+                <li>Pelaminan open-concept arch bertekstur alami</li>
+              </ul>
+            </div>
+            <div class="blog-author">
+              <span>Oleh: <strong>Erza Maulana (Creative Director)</strong> · 4 Menit Baca</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <span class="brand-name" style="color: #ffffff; display: block; margin-bottom: 10px;">Siger & Co.</span>
+          <p>
+            Penyedia jasa Wedding Organizer, Wedding Planner, dan Undangan Digital untuk Lampung dan Palembang.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Menu Cepat</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="katalog.html">Paket Pernikahan</a></li>
+            <li><a href="#portofolio">Galeri Portofolio</a></li>
+            <li><a href="#blog">Blog Pernikahan</a></li>
+            <li><a href="kontak.html">Kontak & Pemesanan</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Layanan Kami</h4>
+          <ul class="footer-links">
+            <li><a href="#paket">Day-of Coordination</a></li>
+            <li><a href="#paket">Full Wedding Planning</a></li>
+            <li><a href="#digital">Undangan Digital Web</a></li>
+            <li><a href="#paket">Paket All-In Luxury</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kantor & Kontak</h4>
+          <p>
+            <strong>Kantor Siger & Co.:</strong><br>
+            Jl. Kedaton, Bandar Lampung<br><br>
+            <strong>WhatsApp:</strong> 0898-2677-818<br>
+            <strong>Email:</strong> halo@sigerweddings.com
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Siger & Co. Hak Cipta Dilindungi.</div>
+        <div>
+          <a href="kontak.html" style="color: #a8a29e; margin-right: 15px;">Kebijakan Privasi</a>
+          <a href="kontak.html" style="color: #a8a29e;">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    async function klikdisini() {
+      const audio = document.getElementById("background-audio");
+
+      try {
+        await audio.play();
+        document.getElementById("cover-overlay").hidden = true;
+      } catch {
+        document.getElementById("audio-status").textContent = "Musik belum bisa diputar. Tekan tombol untuk mencoba lagi.";
+      }
+    }
+  </script>
+</body>
+</html>
